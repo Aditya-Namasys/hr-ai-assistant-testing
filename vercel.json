@@ -20,5 +20,15 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "app/pages/api/**/*.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "build": {
+    "env": {
+      "GENERATE_SOURCEMAP": "false"
+    }
+  }
 }
