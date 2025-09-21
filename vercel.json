@@ -20,10 +20,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "@react_app_api_url",
-    "REACT_APP_WEBSOCKET_URL": "@react_app_websocket_url", 
-    "REACT_APP_SIGNALING_URL": "@react_app_signaling_url"
-  }
+  ]
 }
