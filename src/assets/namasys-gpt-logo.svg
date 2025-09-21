@@ -1,0 +1,13 @@
+<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo shapes -->
+  <g transform="translate(10, 30)">
+    <path d="M0,0 L45,0 L45,10 L0,10 Z" fill="#0e3b7c"/>
+    <path d="M5,12 L50,12 L50,22 L5,22 Z" fill="#6c757d"/>
+    <path d="M10,24 L55,24 L55,34 L10,34 Z" fill="#adb5bd"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(80, 40)">
+    <text font-family="Arial, sans-serif" font-size="28" font-weight="300" fill="#adb5bd">NamaSYS GPT</text>
+  </g>
+</svg>

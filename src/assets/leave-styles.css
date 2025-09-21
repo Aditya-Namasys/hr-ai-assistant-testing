@@ -1,0 +1,340 @@
+/* Leave Management Styles */
+
+
+/* Leave Actions Bar */
+
+.leave-actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.primary-btn {
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.primary-btn:hover {
+    background-color: #3a5ce5;
+}
+
+.primary-btn.small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-icon {
+    flex-shrink: 0;
+}
+
+.leave-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.status-filter {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9fafc;
+    cursor: pointer;
+}
+
+.status-filter:focus {
+    outline: none;
+    border-color: #4a6cf7;
+}
+
+
+/* Leave Form Styles */
+
+.leave-form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-icon {
+    color: #4a6cf7;
+}
+
+.form-control {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.submit-btn {
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3a5ce5;
+}
+
+
+/* Leaves Table Styles */
+
+.leaves-table-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.no-leaves-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.no-data-icon {
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+.leaves-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaves-table th {
+    background-color: #f9fafc;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+.leaves-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.leave-row {
+    transition: background-color 0.2s ease;
+}
+
+.leave-row:hover {
+    background-color: #f9fafc;
+}
+
+.leave-row.pending {
+    background-color: rgba(255, 193, 7, 0.05);
+}
+
+.leave-row.approved {
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+.leave-row.rejected {
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.employee-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.employee-icon {
+    color: #4a6cf7;
+}
+
+.days-cell {
+    text-align: center;
+    font-weight: 500;
+}
+
+.leave-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-icon {
+    display: flex;
+}
+
+.status-icon.approved {
+    color: #28a745;
+}
+
+.status-icon.rejected {
+    color: #dc3545;
+}
+
+.status-icon.pending {
+    color: #ffc107;
+}
+
+.status-text {
+    font-weight: 500;
+}
+
+.status-text.approved {
+    color: #28a745;
+}
+
+.status-text.rejected {
+    color: #dc3545;
+}
+
+.status-text.pending {
+    color: #ffc107;
+}
+
+.reason-cell {
+    max-width: 250px;
+}
+
+.reason-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.leave-actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn.approve {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.action-btn.approve:hover {
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.action-btn.reject {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.action-btn.reject:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+.action-btn.edit {
+    background-color: rgba(74, 108, 247, 0.1);
+    color: #4a6cf7;
+}
+
+.action-btn.edit:hover {
+    background-color: rgba(74, 108, 247, 0.2);
+}
+
+.action-btn.delete {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.action-btn.delete:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+.no-actions {
+    color: #ccc;
+    font-weight: 500;
+}

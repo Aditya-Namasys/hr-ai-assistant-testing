@@ -1,0 +1,377 @@
+/* ===== ENHANCED VIDEO STREAMING STYLES ===== */
+
+.candidate-video-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.candidate-video-live {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: visible !important;
+  background: #1f2937;
+}
+
+.candidate-video-live:hover {
+  transform: scale(1.02);
+}
+
+.video-status-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-indicator.live {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  animation: pulse-live 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+.candidate-video-preview {
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #10b981;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+  background: #f3f4f6;
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.video-preview-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+.candidate-video-preview:hover {
+  border-color: #059669;
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.3);
+}
+
+.video-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.video-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.video-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.video-toggle.disabled {
+  opacity: 0.5;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rec-dot {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ef4444;
+  animation: pulse-rec 1s ease-in-out infinite;
+}
+
+@keyframes pulse-rec {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Video Preview Container for Ready State */
+.video-preview-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.video-preview-container video {
+  max-width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+}
+
+.video-preview-container video:hover {
+  border-color: #10b981;
+}
+
+/* Professional Layout Improvements */
+.video-preview-panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.video-preview-panel h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Enhanced Feed Placeholder */
+.feed-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+  color: #6b7280;
+}
+
+.feed-placeholder svg {
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.feed-placeholder p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Live Monitor Video Styles */
+.live-feed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.live-feed-image:hover {
+  transform: scale(1.05);
+}
+
+.video-wrapper {
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1f2937;
+}
+
+.video-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.video-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.video-info {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.video-feed-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+  color: #6b7280;
+}
+
+.video-placeholder svg {
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.video-placeholder p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.video-placeholder small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Live Transcript Styles */
+.transcript-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.transcript-message {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #e5e7eb;
+}
+
+.transcript-message.ai {
+  background: #f0f9ff;
+  border-left-color: #3b82f6;
+}
+
+.transcript-message.candidate {
+  background: #f0fdf4;
+  border-left-color: #10b981;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.speaker {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transcript-message.ai .speaker {
+  color: #3b82f6;
+}
+
+.transcript-message.candidate .speaker {
+  color: #10b981;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.message-text {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.empty-state-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.empty-state-small svg {
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.empty-state-small p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.empty-state-small small {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
