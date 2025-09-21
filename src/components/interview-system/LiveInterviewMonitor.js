@@ -64,10 +64,14 @@ const LiveInterviewMonitor = ({ adminId, onSwitchToDashboard }) => {
       interviewId,
       signalingUrl: SIGNALING_URL,
       onRemoteStream: (stream) => {
+        console.log('[LiveInterviewMonitor] Received remote stream:', stream);
+        console.log('[LiveInterviewMonitor] Stream tracks:', stream.getTracks());
         setRemoteStream(stream);
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
-          console.log('[WebRTC Answerer] Set video element srcObject');
+          console.log('[LiveInterviewMonitor] Set video element srcObject');
+          // Force video to play
+          videoRef.current.play().catch(console.error);
         }
       },
       onConnectionStateChange: (state) => {
@@ -84,6 +88,15 @@ const LiveInterviewMonitor = ({ adminId, onSwitchToDashboard }) => {
       }
     };
   }, [selectedInterview]);
+
+  // Handle video element when stream becomes available
+  useEffect(() => {
+    if (remoteStream && videoRef.current) {
+      console.log('[LiveInterviewMonitor] Setting stream to video element');
+      videoRef.current.srcObject = remoteStream;
+      videoRef.current.play().catch(console.error);
+    }
+  }, [remoteStream]);
 
   const fetchMonitoringData = useCallback(async () => {
     try {
@@ -346,7 +359,11 @@ const LiveInterviewMonitor = ({ adminId, onSwitchToDashboard }) => {
                           ref={videoRef}
                           autoPlay
                           playsInline
+                          muted={false}
                           controls={false}
+                          onLoadedMetadata={() => console.log('[LiveInterviewMonitor] Video metadata loaded')}
+                          onPlay={() => console.log('[LiveInterviewMonitor] Video started playing')}
+                          onError={(e) => console.error('[LiveInterviewMonitor] Video error:', e)}
                           style={{ width: '100%', height: '100%', borderRadius: '8px', objectFit: 'cover', background: '#222' }}
                         />
                       ) : (
