@@ -155,7 +155,7 @@ function CandidateInterviewPortal({ interviewId }) {
       await fetch(`${API_URL}/api/conversational_route/update-interview-status`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ interview_id: interviewId, status: "ready" }),/*in_progress*/
+      body: JSON.stringify({ interview_id: interviewId, status: "in_progress" }),
     });
       console.log("Starting conversation with candidate info:", candidateInfo);
       await conversation.startSession({
